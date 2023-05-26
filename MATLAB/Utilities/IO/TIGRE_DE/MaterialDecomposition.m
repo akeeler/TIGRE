@@ -21,7 +21,7 @@ for idx = 1:size(proj_h, 3)
     proj_h(:,:,idx) = imgaussfilt(proj_h(:,:,idx), 1.5);
 end
 
-[Al_thickness, PMMA_thickness, angles] = DeDecomp(proj_l, angles_l, proj_h, angles_h);
+[Al_thickness, PMMA_thickness, angles] = DeDecompose(proj_l, angles_l, proj_h, angles_h);
 
 % LUT of basis material linear attenuations (mm^-1)
 switch energy
